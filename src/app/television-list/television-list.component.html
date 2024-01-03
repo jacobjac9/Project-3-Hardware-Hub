@@ -1,0 +1,25 @@
+<div style="padding-left: 10px;">
+  <h2>Televisions</h2>
+
+  <div *ngFor="let television of televisions">
+    <h3>
+      <a
+        [title]="television.name + ' details'"
+        [routerLink]="['/televisions', television.id]"
+      >
+        {{ television.name }}
+      </a>
+    </h3>
+
+    <!-- . . . -->
+
+    <p *ngIf="television.description">
+      {{ television.description }}
+    </p>
+
+    <button type="button" (click)="share()">Share</button>
+
+    <app-product-alerts [television]="television" (notify)="onNotify()">
+    </app-product-alerts>
+  </div>
+</div>

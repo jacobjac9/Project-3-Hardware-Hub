@@ -1,0 +1,17 @@
+<app-top-bar></app-top-bar>
+<div class="container">
+  <div style="display: flex; flex-direction: row; align-items: center;">
+    <button style="margin: 10px;" [routerLink]="['/Home']">Home</button>
+    <button style="margin: 10px;" [routerLink]="['/List1']">Phones</button>
+    <button style="margin: 10px;" [routerLink]="['/List2']">Televisions</button>
+    <button style="margin: 10px;" [routerLink]="['/List3']">Laptops</button>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+<router-outlet></router-outlet>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

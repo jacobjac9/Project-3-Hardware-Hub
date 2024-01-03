@@ -1,0 +1,22 @@
+<div style="padding-left: 10px;">
+  <h2>Laptops</h2>
+
+  <div *ngFor="let laptop of laptops">
+    <h3>
+      <a [title]="laptop.name + ' details'" [routerLink]="['/laptops', laptop.id]">
+        {{ laptop.name }}
+      </a>
+    </h3>
+
+    <!-- . . . -->
+
+    <p *ngIf="laptop.description">
+      {{ laptop.description }}
+    </p>
+
+    <button type="button" (click)="share()">Share</button>
+
+    <app-product-alerts [laptop]="laptop" (notify)="onNotify()">
+    </app-product-alerts>
+  </div>
+</div>

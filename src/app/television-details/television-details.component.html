@@ -1,0 +1,19 @@
+<div style="padding-left: 10px;">
+<p>Television Details</p>
+
+<div *ngIf="television">
+  <h3>
+    {{ television.name }}
+    <h3>
+      <h4>
+        {{ television.price | currency }}
+        <h4>
+          <p>{{ television.description }}</p>
+          <button type="button" (click)="addToCart(television)">Buy</button>
+          <div></div>
+        </h4>
+      </h4>
+    </h3>
+  </h3>
+</div>
+
